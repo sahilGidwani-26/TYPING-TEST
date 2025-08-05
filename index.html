@@ -1,0 +1,53 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Typing Speed Test</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</head>
+<body>
+  <div class="container">
+    <div class="top">
+      <h1>Typing Speed Test</h1>
+      <div class="limits-box">
+        <div class="limit">
+          <button onclick="setTime(60)">1 min</button>
+          <button onclick="setTime(180)">3 min</button>
+          <button onclick="setTime(240)">4 min</button>
+          <button onclick="setTime(300)">5 min</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="stats">
+      <div>Time: <span id="time">60</span>s</div>
+      <div>Correct Words: <span id="cw">0</span></div>
+      <div>Errors: <span id="errors">0</span></div>
+    </div>
+
+    <div class="text-display" id="textDisplay"></div>
+
+    <div class="input-area">
+      <textarea id="textInput" rows="3" placeholder="Start typing..."></textarea>
+    </div>
+
+    <div class="controls">
+      <button onclick="startTest()">Start</button>
+      <button onclick="stopTest()">Stop</button>
+      <button onclick="restartTest()">Restart</button>
+    </div>
+
+    <div id="popup" class="popup hidden">
+      <div class="popup-content">
+        <h2>Time is over!</h2>
+        <p id="resultStats"></p>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
